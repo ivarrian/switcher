@@ -22,8 +22,9 @@ Install
 
 Usage
 =====
-
+```shell
     switch
+```
 
 This will list all your current profiles from the credentials file located at `~/.aws/credentials`, choose one to make it the current default :
 
