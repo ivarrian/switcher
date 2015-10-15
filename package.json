@@ -1,0 +1,26 @@
+{
+  "name": "switcher",
+  "version": "1.0.0",
+  "description": "AWS profile switcher",
+  "main": "bin/switch",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivarrian/switcher.git"
+  },
+  "keywords": [
+    "AWS"
+  ],
+  "author": "Ravi Nair <ravi.nair@news.com.au> (http://graygoofactory.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivarrian/switcher/issues"
+  },
+  "homepage": "https://github.com/ivarrian/switcher#readme",
+  "dependencies": {
+    "inquirer": "^0.10.1",
+    "linebyline": "^1.1.0"
+  }
+}
