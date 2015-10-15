@@ -13,11 +13,12 @@ Requirements
 
 Install
 =======
-
+```shell
     git clone <repo>
     cd switcher
     npm install
     export PATH=$PATH:$(pwd)/bin
+```
 
 Usage
 =====
