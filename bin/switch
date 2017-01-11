@@ -3,11 +3,11 @@
 var inquirer = require('inquirer');
 var profile = require('../lib/profile');
 
-var homeDir = process.env.HOME;
+var homeDir = (process.platform === 'win32') ? process.env.USERPROFILE : process.env.HOME;
 var fileName = homeDir + '/.aws/credentials';
 
-profile.getProfileNames(fileName,function(err,profiles){
-  if(err){
+profile.getProfileNames(fileName, function (err, profiles) {
+  if (err) {
     console.log(err);
   }
   else {
@@ -18,15 +18,15 @@ profile.getProfileNames(fileName,function(err,profiles){
         message: "Choose profile to load:",
         choices: profiles
       }
-    ], function( answers ) {
-        profile.setProfile(answers.profile,fileName, function(err){
-          if(err){
-            console.log("Well...that didn't work");
-          }
-          else {
-            console.log("Profile switched to "+answers.profile);
-          }
-        })
-      });
+    ], function (answers) {
+      profile.setProfile(answers.profile, fileName, function (err) {
+        if (err) {
+          console.log("Well...that didn't work");
+        }
+        else {
+          console.log("Profile switched to " + answers.profile);
+        }
+      })
+    });
   }
 });
